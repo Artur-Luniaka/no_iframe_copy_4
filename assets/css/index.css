@@ -1,0 +1,382 @@
+/* Index Page Styles */
+
+/* Hero Section */
+.hero-section {
+  height: 600px;
+  background: linear-gradient(
+    135deg,
+    var(--color-dirt) 0%,
+    var(--color-grass) 100%
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><rect width="8" height="8" x="0" y="0" fill="rgba(0,0,0,0.1)" /><rect width="8" height="8" x="8" y="8" fill="rgba(0,0,0,0.1)" /></svg>');
+  background-size: 16px 16px;
+  opacity: 0.3;
+  animation: backgroundScroll 20s linear infinite;
+}
+
+.hero-content {
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn var(--transition-slow);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 4px solid var(--color-stone);
+}
+
+.hero-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.hero-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.hero-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all var(--transition-normal);
+}
+
+.hero-button:hover {
+  background-color: var(--color-grass);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-button:hover::before {
+  left: 100%;
+}
+
+/* Build Flow Section */
+.build-flow-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-stone);
+  position: relative;
+  overflow: hidden;
+}
+
+.build-flow-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-emerald),
+    var(--color-grass)
+  );
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  padding-bottom: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--gradient-sunset);
+  border-radius: var(--radius-sm);
+}
+
+.build-flow-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+/* Blockscape Section */
+.blockscape-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(
+    45deg,
+    var(--color-dirt) 0%,
+    var(--color-wood) 100%
+  );
+  color: var(--color-text-light);
+  position: relative;
+}
+
+.blockscape-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.blockscape-item {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-stone);
+  transition: transform var(--transition-normal);
+}
+
+.blockscape-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Crafting Grounds Section */
+.crafting-grounds-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-wood);
+  color: var(--color-text-light);
+}
+
+.crafting-grounds-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.crafting-title {
+  margin-bottom: 20px;
+}
+
+/* Biome Explorer Section */
+.biome-explorer-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-grass);
+  color: var(--color-text-light);
+}
+
+.biome-explorer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.biome-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Voices Section */
+.voices-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-stone);
+  position: relative;
+}
+
+.voices-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.voice-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+}
+
+.voice-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-emerald);
+  box-shadow: var(--shadow-lg);
+}
+
+.voice-avatar {
+  width: 100px;
+  height: 100px;
+  margin-bottom: var(--spacing-md);
+  border-radius: 50%;
+  border: 3px solid var(--color-emerald);
+  box-shadow: var(--shadow-md);
+}
+
+.voice-text {
+  text-align: center;
+  color: var(--color-text-light);
+}
+
+.voice-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.voice-location {
+  color: var(--color-emerald);
+  font-size: var(--font-size-sm);
+}
+
+/* World Explorer Section */
+.world-explorer-section {
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(to bottom, var(--color-grass), var(--color-dirt));
+  color: var(--color-text-light);
+  position: relative;
+}
+
+.world-explorer-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-dirt), var(--color-wood));
+}
+
+.world-explorer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.world-explorer-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.crafting-grounds-content,
+.biome-explorer-content {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  border: 3px solid var(--color-stone);
+  position: relative;
+  overflow: hidden;
+}
+
+.crafting-grounds-content::before,
+.biome-explorer-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-emerald),
+    var(--color-grass)
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.crafting-grounds-content:hover::before,
+.biome-explorer-content:hover::before {
+  opacity: 1;
+}
+
+.crafting-grounds-content:hover,
+.biome-explorer-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-emerald);
+}
+
+/* Animations */
+@keyframes backgroundScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 500px;
+  }
+
+  .world-explorer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .build-flow-content {
+    grid-template-columns: 1fr;
+  }
+
+  .blockscape-content {
+    grid-template-columns: 1fr;
+  }
+
+  .voices-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-md);
+  }
+
+  .section-title {
+    font-size: var(--font-size-xl);
+  }
+}

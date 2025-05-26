@@ -1,0 +1,95 @@
+/* Cookies Page Styles */
+
+/* Hero Section */
+.cookies-hero-section {
+  height: 40vh;
+  background: var(--gradient-nether);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.cookies-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.cookies-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  max-width: 600px;
+}
+
+/* Cookies Container */
+.cookies-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.cookies-content {
+  background-color: #fff;
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.cookies-section-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-lava);
+}
+
+.cookies-section-subtitle {
+  font-size: var(--font-size-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.cookies-text {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.cookies-list {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.cookies-list-item {
+  margin-bottom: var(--spacing-sm);
+}
+
+.cookies-link {
+  color: var(--color-lava);
+}
+
+.cookies-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cookies-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .cookies-subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .cookies-section-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .cookies-section-subtitle {
+    font-size: var(--font-size-md);
+  }
+}

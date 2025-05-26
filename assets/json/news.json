@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Capitalist Market News | Adventure Capitalist Hole Game",
+    "description": "Stay updated with the latest investments, game events, and profit boosts in Adventure Capitalist Hole Game!"
+  },
+  "hero": {
+    "title": "Capitalist Market News",
+    "subtitle": "Your source for all things Adventure Capitalist"
+  },
+  "articles": [
+    {
+      "image": "./images/news-1.png",
+      "date": "May 21, 2025",
+      "title": "New Investment Opportunities Incoming",
+      "excerpt": "Prepare to unlock fresh businesses, bonuses, and upgrades in the next big game update — don’t miss out!"
+    },
+    {
+      "image": "./images/news-2.png",
+      "date": "May 15, 2025",
+      "title": "Investor Challenge Launches Soon",
+      "excerpt": "Compete globally to build the most profitable empire. Only the smartest investors will come out on top!"
+    },
+    {
+      "image": "./images/news-3.png",
+      "date": "May 10, 2025",
+      "title": "Secrets Behind Passive Income Hacks",
+      "excerpt": "Learn tips and tricks to maximize your passive income and dominate the capitalist leaderboard."
+    }
+  ]
+}

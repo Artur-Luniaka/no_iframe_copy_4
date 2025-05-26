@@ -1,0 +1,517 @@
+/* Import page-specific CSS */
+@import url("index.css");
+@import url("news.css");
+@import url("disclaimer.css");
+@import url("contact.css");
+@import url("privacy.css");
+@import url("cookies.css");
+
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700&display=swap");
+
+/* CSS Variables */
+:root {
+  /* Colors */
+  --color-dirt: #a18250; /* оттенок коричневого — богатая земля для бизнеса */
+  --color-grass: #a2d149; /* ярко-зелёный, символ роста и прибыли */
+  --color-stone: #9b9b9b; /* нейтральный серый камень */
+  --color-wood: #c7a34b; /* золотистое дерево — как богатство */
+  --color-sand: #f9e79f; /* светлый песок — спокойствие инвестиций */
+  --color-water: #3a86ff; /* насыщенный синий — стабильность */
+  --color-lava: #ff6f00; /* огненно-оранжевый — энергичные сделки */
+  --color-obsidian: #1b1b1b; /* глубокий чёрный для контрастов */
+  --color-emerald: #2ecc71; /* свежий зелёный — прибыль и успех */
+  --color-diamond: #00d2ff; /* яркий голубой — драгоценные активы */
+  --color-redstone: #ff4c4c; /* насыщенный красный — внимание и предупреждения */
+  --color-gold: #ffcb05; /* яркое золото — деньги и награды */
+  --color-text: #1c1c1c; /* тёмно-серый — читаемый текст */
+  --color-text-light: #ffffff; /* белый текст для тёмного фона */
+  --color-background: #e8f0fe; /* светлый голубой фон — деловая атмосфера */
+
+  /* Gradients */
+  --gradient-sunrise: linear-gradient(
+    to right,
+    #ffdf7e,
+    #f4b400
+  ); /* золотистый градиент — начало прибыльного дня */
+  --gradient-sunset: linear-gradient(
+    to right,
+    #ff8a00,
+    #ff3d00
+  ); /* энергичный закат — конец дня инвестиций */
+  --gradient-nether: linear-gradient(
+    to right,
+    #d32f2f,
+    #8b0000
+  ); /* интенсивный красный — риски и вызовы */
+  --gradient-end: linear-gradient(
+    to right,
+    #0f1111,
+    #4b4b4b
+  ); /* строгий темный градиент для футера и меню */
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 5px 10px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 12px 20px rgba(0, 0, 0, 0.2);
+  --shadow-inner: inset 0 3px 6px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.35s ease;
+  --transition-slow: 0.6s ease;
+
+  /* Spacing */
+  --spacing-xs: 0.3rem;
+  --spacing-sm: 0.6rem;
+  --spacing-md: 1.2rem;
+  --spacing-lg: 2.5rem;
+  --spacing-xl: 5rem;
+
+  /* Border Radius */
+  --radius-sm: 0.3rem;
+  --radius-md: 0.6rem;
+  --radius-lg: 1.2rem;
+
+  /* Font Sizes */
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 0.9rem;
+  --font-size-md: 1.1rem;
+  --font-size-lg: 1.4rem;
+  --font-size-xl: 1.8rem;
+  --font-size-2xl: 2.4rem;
+  --font-size-3xl: 3.5rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base Styles */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", "Helvetica Neue", "Inter", "Tahoma", system-ui,
+    sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-grass);
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-emerald);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+}
+
+/* Container */
+.main-content {
+  min-height: 100vh;
+  padding-top: 80px; /* Height of the header */
+}
+
+/* Header Styles */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-stone);
+  z-index: 1000;
+  box-shadow: var(--shadow-md);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.main-nav {
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-lg);
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
+}
+
+.nav-link {
+  color: var(--color-text-light);
+  font-weight: 600;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-emerald);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--color-emerald);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile Menu */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.menu-bar {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-text-light);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.mobile-menu.active {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-menu-container {
+  position: absolute;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: var(--color-stone);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  transition: right var(--transition-normal);
+  overflow-y: auto;
+}
+
+.mobile-menu.active .mobile-menu-container {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--spacing-xl);
+}
+
+.mobile-menu-close {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.mobile-nav-link {
+  color: var(--color-text-light);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  display: block;
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color var(--transition-fast);
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-emerald);
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--color-stone);
+  color: var(--color-text-light);
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.footer-contact,
+.footer-links {
+  min-width: 250px;
+}
+
+.footer-heading {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.footer-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--color-emerald);
+}
+
+.footer-address,
+.footer-phone,
+.footer-email {
+  margin-bottom: var(--spacing-sm);
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer-nav-link {
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+  color: var(--color-emerald);
+}
+
+.footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: var(--spacing-lg);
+  text-align: center;
+}
+
+/* Cookie Bar */
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-obsidian);
+  color: var(--color-text-light);
+  padding: var(--spacing-md);
+  z-index: 1000;
+  transform: translateY(100%);
+  transition: transform var(--transition-normal);
+}
+
+.cookie-bar.active {
+  transform: translateY(0);
+}
+
+.cookie-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.cookie-text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cookie-link {
+  color: var(--color-emerald);
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.cookie-accept,
+.cookie-decline {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.cookie-accept {
+  background-color: var(--color-emerald);
+  color: var(--color-text-light);
+}
+
+.cookie-accept:hover {
+  background-color: var(--color-grass);
+}
+
+.cookie-decline {
+  background-color: transparent;
+  color: var(--color-text-light);
+  border: 1px solid var(--color-text-light);
+}
+
+.cookie-decline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .header-container {
+    justify-content: flex-end;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .cookie-content {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Utility Classes */
+.pixelated {
+  image-rendering: pixelated;
+}
+
+.minecraft-border {
+  border: 4px solid var(--color-stone);
+  position: relative;
+}

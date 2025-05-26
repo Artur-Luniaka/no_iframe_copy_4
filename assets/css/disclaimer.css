@@ -1,0 +1,106 @@
+/* Disclaimer Page Styles */
+
+/* Body Override */
+.disclaimer-body {
+  background-color: var(--color-obsidian);
+}
+
+/* Hero Section */
+.disclaimer-hero-section {
+  height: 40vh;
+  background: var(--gradient-end);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.disclaimer-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><rect width="10" height="10" x="0" y="0" fill="rgba(255,255,255,0.05)" /><rect width="10" height="10" x="10" y="10" fill="rgba(255,255,255,0.05)" /></svg>');
+  background-size: 20px 20px;
+  opacity: 0.3;
+}
+
+.disclaimer-title {
+  font-size: var(--font-size-3xl);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+}
+
+.disclaimer-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Disclaimer Container */
+.disclaimer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.disclaimer-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  color: var(--color-text-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.disclaimer-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.disclaimer-section:last-child {
+  margin-bottom: 0;
+}
+
+.disclaimer-section-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-diamond);
+}
+
+.disclaimer-text {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.disclaimer-list {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.disclaimer-list-item {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .disclaimer-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .disclaimer-subtitle {
+    font-size: var(--font-size-md);
+  }
+
+  .disclaimer-section-title {
+    font-size: var(--font-size-lg);
+  }
+}

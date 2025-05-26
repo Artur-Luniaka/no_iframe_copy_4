@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Village Hub | Minecraft Adventure</title>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <div
+      class="header-container"
+      data-include="assets/includes/header.html"
+    ></div>
+
+    <main class="main-content">
+      <section class="contact-hero-section">
+        <div class="contact-hero-content">
+          <h1 class="contact-title">Contact Us</h1>
+          <p class="contact-subtitle">Get in touch with our team</p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="contact-grid">
+          <div class="contact-form-wrapper">
+            <div class="contact-form-container minecraft-border">
+              <h2 class="form-title">Send us a message</h2>
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input minecraft-border"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input minecraft-border"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    id="subject"
+                    name="subject"
+                    class="form-input minecraft-border"
+                    required
+                  />
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-textarea minecraft-border"
+                    required
+                  ></textarea>
+                  <span class="form-error"></span>
+                </div>
+                <button type="submit" class="form-submit minecraft-border">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="contact-info-wrapper">
+            <div class="contact-info-container minecraft-border">
+              <div class="contact-info">
+                <h2 class="info-title">Contact Information</h2>
+                <div class="info-block">
+                  <div class="info-address">
+                    123 Minecraft Avenue, Overworld
+                  </div>
+                </div>
+                <div class="info-block">
+                  <div class="info-phone">+1 234 567 890</div>
+                </div>
+                <div class="info-block">
+                  <div class="info-email">contact@minecraftadventure.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <div class="map-container minecraft-border">
+          <h2 class="map-title">Find Us</h2>
+          <div class="contact-map">
+            <!-- Google Maps iframe will be inserted here via JavaScript -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div
+      class="footer-container"
+      data-include="assets/includes/footer.html"
+    ></div>
+    <script src="assets/js/main.js" type="module"></script>
+  </body>
+</html>

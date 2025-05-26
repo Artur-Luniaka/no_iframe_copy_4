@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "title": "Terms & Policies | Adventure Capitalist Hole Game",
+    "description": "Important disclaimers and legal info about the Adventure Capitalist Hole Game fan website."
+  },
+  "hero": {
+    "title": "Terms & Policies",
+    "subtitle": "Key information about this fan site and its content"
+  },
+  "content": [
+    {
+      "title": "Site Disclaimer",
+      "paragraphs": [
+        "The content on this fan website is provided for entertainment and informational purposes only. While we strive to offer accurate and engaging content, we make no guarantees about the accuracy, reliability, or completeness of anything presented here, including investment tips, game mechanics, or descriptions.",
+        "Use of any information from this site is at your own risk. We are not liable for any losses or damages, direct or indirect, arising from the use of this site or its content."
+      ]
+    },
+    {
+      "title": "Game Ownership",
+      "paragraphs": [
+        "Adventure Capitalist Hole Game is the property of its respective creators. This website is not affiliated with, endorsed by, or sponsored by the official game developers or publishers.",
+        "All names, characters, assets, and other elements related to the game remain the property of their rightful owners."
+      ]
+    },
+    {
+      "title": "External Links",
+      "paragraphs": [
+        "This site may contain links to external websites beyond our control. We are not responsible for the content, policies, or availability of those external sites. Linking to these sites does not imply endorsement."
+      ]
+    },
+    {
+      "title": "Site Availability",
+      "paragraphs": [
+        "We aim to keep this fan site accessible at all times. However, we are not responsible for downtime caused by technical issues, server problems, or other unexpected events beyond our control."
+      ]
+    }
+  ]
+}
