@@ -137,7 +137,7 @@ button {
 /* Container */
 .main-content {
   min-height: 100vh;
-  padding-top: 80px; /* Height of the header */
+  padding-top: 40px; /* Height of the header */
 }
 
 /* Header Styles */

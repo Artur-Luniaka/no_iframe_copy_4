@@ -569,11 +569,12 @@ function initFormValidation() {
         messageError.textContent = "";
       }
 
-      // If form is valid, show success message
+      // Show alert
       if (isValid) {
-        // In a real application, you would submit the form data to a server here
         alert("Message sent successfully!");
         form.reset();
+      } else {
+        alert("Please fill out the form correctly.");
       }
     });
   }
